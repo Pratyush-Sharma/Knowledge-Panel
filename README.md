@@ -14,19 +14,16 @@ Listed are the different situations and challenges/tasks that I came across duri
 
 
 ## Comparison of NER engines
-- The next task was to compare the performance of discovery NER engine which the company was using to extract entities with its types with other possible NER engines that can be developed using python libraries.
-- So, I developed 2 different NER engines using Spacy and Regular expression libraries respectively.
-The 3 different NER’s worked as follows – 
-
+- The next task was to compare the performance of discovery NER engine which the company was using to extract entities with its types with other possible NER engines that can be developed using python libraries. So, I developed 2 different NER engines using Spacy and Regular expression libraries respectively. The 3 different NER’s worked as follows – 
 - **Discovery** – Discovery service enriches the unstructured data that we upload automatically and creates a JSON file for each document containing all the enrichment. This NER engines directly queried the JSON files for entity extraction.
-
 - **Spacy** – Spacy is an important NLP application library. It automatically extracts the entities from a text provided and labels it to its predefined types. 
-
 - **HTML Naviga** – Company had a preprocessed format of the data in which they had added the HTML parsed text into the JSON of each document. So, this NER used regular expression to extract each entity and its types in HTML tags from the HTML text of documents.
 
 - The task was to generate the ground truth and compare the performance of the 3 NER engines and find which is a better source for entity extraction.
+
 **TASK:** 
 - To perform a statistical analysis of extracted entities, generate ground truth table and plot graphs of recall and precision calculated from them.
+
 **Action:**
 - Target was to create a table with voted ground truth and all the entities with their document id and text from which they are extracted. For ground truth, votes were collected, and according to them, I created a function to assign the correct ground truth for an entity. With each doc id, I queried Naviga1 from API to get the associated text and appended the respective columns.
 
